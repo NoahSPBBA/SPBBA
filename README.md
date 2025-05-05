@@ -23,13 +23,6 @@ World Development Indicators:
 - Noah
 - Test
 - Read.me
-
-## Projektstruktur:
-- `data/`: Rohdaten und bereinigte Daten
-- `notebooks/`: Analysen in Jupyter Notebooks
-- `src/`: Python-Module für Datenverarbeitung
-- `tests/`: Testfunktionen zur Sicherstellung von Codequalität
-- `docs/`: Dokumentation und Diagramme
   
 ## Teilnehmer:
 - Noah Wolf
