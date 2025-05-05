@@ -1,9 +1,8 @@
-## Zeitreihenanalyse:
+## Zeitreihenanalyse: World Development Indicators: 
 
-Dieses Projekt analysiert die wichtigsten sozioökonomischen Entwicklungsindikatoren für Deutschland mithilfe öffentlich zugänglicher Daten der Weltbank.
+Dieses Projekt analysiert die wichtigsten sozioökonomischen Entwicklungsindikatoren für ausgewählte Länder mithilfe öffentlich zugänglicher Daten der Weltbank.
 
-## Thema:
-World Development Indicators: 
+## Themen
 
 - Population, total
 - Poverty headcount ratio
