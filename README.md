@@ -13,6 +13,14 @@
                                - Military expenditure
                                - Net Migration
 
+## Branches:
+- Master/Main
+- Data(prep.)
+- Antonia
+- Noah
+- Test
+- Read.me
+  
 ## Teilnehmer:
 - Noah Wolf
 - Antonia Strohmenger
