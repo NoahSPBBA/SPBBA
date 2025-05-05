@@ -3,17 +3,18 @@
 Dieses Projekt analysiert die wichtigsten sozioökonomischen Entwicklungsindikatoren für Deutschland mithilfe öffentlich zugänglicher Daten der Weltbank.
 
 ## Thema:
-- World Development Indicators: 
-                               - Population, total
-                               - Poverty headcount ratio
-                               - GNI
-                               - Life expectancy at birth
-                               - Fertility rate, births per women
-                               - Electric power consumption
-                               - Inflation
-                               - Exports/Imports
-                               - Military expenditure
-                               - Net Migration
+World Development Indicators: 
+
+- Population, total
+- Poverty headcount ratio
+- GNI
+- Life expectancy at birth
+- Fertility rate, births per women
+- Electric power consumption
+- Inflation
+- Exports/Imports
+- Military expenditure
+- Net Migration
 
 ## Branches:
 - Master/Main
