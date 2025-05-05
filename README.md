@@ -2,7 +2,7 @@
 
 Dieses Projekt analysiert die wichtigsten sozioökonomischen Entwicklungsindikatoren für ausgewählte Länder mithilfe öffentlich zugänglicher Daten der Weltbank.
 
-## Themen(1.1)
+## Themen
 
 - Population, total                [x] (klare Trends)
 - Poverty headcount ratio
