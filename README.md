@@ -2,15 +2,15 @@
 
 Dieses Projekt analysiert die wichtigsten sozioökonomischen Entwicklungsindikatoren für ausgewählte Länder mithilfe öffentlich zugänglicher Daten der Weltbank.
 
-## Themen
+## Themen(1.1)
 
-- Population, total
+- Population, total                [x] (klare Trends)
 - Poverty headcount ratio
-- GNI
-- Life expectancy at birth
-- Fertility rate, births per women
-- Electric power consumption
-- Inflation
+- GNI                              [x] (Zeigt Wirtschaftswachstum, wichtig für Entwicklungspolitik und Investitionsplanung)
+- Life expectancy at birth         [x] (Längerfristige Trends gut modellierbar, wichtig für Gesundheits- und Rentensysteme)
+- Fertility rate, births per women [x] (Einfluss auf langfristige Bevölkerungstrends, gut prognostizierbar)
+- Electric power consumption       [x] (Wichtig für Energieplanung, Industriewachstum, Klimaziele)
+- Inflation                        [x] (Hochrelevant für Wirtschaft, Geldpolitik; kurzfristig gut prognostizierbar)
 - Exports/Imports
 - Military expenditure
 - Net Migration
@@ -18,6 +18,8 @@ Dieses Projekt analysiert die wichtigsten sozioökonomischen Entwicklungsindikat
 ## Branches:
 - Master/Main
 - Data(prep.)
+- Forecast (Bei Themen mit [x] markeirt)
+- Grafiken?
 - Antonia
 - Noah
 - Test
