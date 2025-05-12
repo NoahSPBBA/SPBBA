@@ -26,13 +26,13 @@ Die verwendeten Daten wurden direkt über [Google Trends](https://trends.google.
 
 ## Projektstruktur
 google-trends-analysis/
--data/                  # Roh- und bereinigte Datensätze
--notebooks/             # Jupyter Notebooks für Analysen
--src/                   # Python-Module für Datenverarbeitung
--tests/                 # Unit-Tests für Python-Module
--.gitignore             # Ignorierte Dateien
--requirements.txt       # Python-Abhängigkeiten
--README.md              # Projektbeschreibung
+- data/                  # Roh- und bereinigte Datensätze
+- notebooks/             # Jupyter Notebooks für Analysen
+- src/                   # Python-Module für Datenverarbeitung
+- tests/                 # Unit-Tests für Python-Module
+- .gitignore             # Ignorierte Dateien
+- requirements.txt       # Python-Abhängigkeiten
+- README.md              # Projektbeschreibung
 
   
 ## Teilnehmer:
