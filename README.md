@@ -1,21 +1,33 @@
-## Zeitreihenanalyse: Google Trends Analyse
+## Zeitreihenanalyse: BMW Aktienkurs & Google Trends Analyse
 
 ## Projektbeschreibung
-In diesem Projekt analysieren wir die Entwicklung von Suchanfragen aus Google Trends. 
-Dabei untersuchen wir unter anderem Trends zu Kryptowährungen sowie den Vergleich zwischen zwei bekannten Persönlichkeiten aus dem Sport. 
-Ziel ist es, mithilfe von Datenanalysen und Visualisierungen interessante Erkenntnisse über das Suchverhalten von Nutzern zu gewinnen.
 
-## Analyse-Themen
-Bitcoin vs. Ethereum (Kryptowährungstrends)
-Cristiano Ronaldo vs. Lionel Messi (Sportliche Popularität)
+In diesem Projekt analysieren wir den Zusammenhang zwischen dem Aktienkurs der BMW Group und dem öffentlichen Interesse an BMW, gemessen anhand der Google Trends Daten. 
+Ziel ist es, eventuelle Korrelationen zu identifizieren und Prognosen für den zukünftigen Aktienkurs unter Einbezug der Suchtrends zu entwickeln.
 
-## Dantenquelle
-Die verwendeten Daten wurden direkt über [Google Trends](https://trends.google.com/) heruntergeladen.
+### Analysierte Datensätze
 
-| Datensatz                 | Beschreibung                   |
-|---------------------------|---------------------------------|
-| `google_btc_eth.csv`      | Suchtrends zu Bitcoin & Ethereum |
-| `google_ronaldo_messi.csv`| Suchtrends zu Ronaldo & Messi  |
+| Datensatz           | Beschreibung                         |
+|---------------------|--------------------------------------|
+| `bmw_aktie.csv`     | Historische Aktienkurse der BMW Group |
+| `google_bmw.csv`    | Google Trends Daten zum Suchbegriff „BMW“ |
+
+---
+
+## Datenquellen
+
+- **Aktienkurse**: Öffentliche Finanzplattformen  
+- **Google Trends**: [https://trends.google.com/](https://trends.google.com/)
+
+---
+
+## Installation & Setup
+
+1. Repository klonen:
+```bash
+git clone https://github.com/euer-team/bmw-stock-trends.git
+cd bmw-stock-trends
+
 
 ## Branches:
 - Master/Main
@@ -24,15 +36,17 @@ Die verwendeten Daten wurden direkt über [Google Trends](https://trends.google.
 - analysis: ronaldo - messi
 - merge- report (bericht)
 
-## Projektstruktur
-google-trends-analysis/
+bmw-stock-trends/
 - data/                  # Roh- und bereinigte Datensätze
-- notebooks/             # Jupyter Notebooks für Analysen
-- src/                   # Python-Module für Datenverarbeitung
+- bmw_aktie.csv
+- google_bmw.csv
+- notebooks/             # Explorative Analysen 
+- scripts/               # Python-Skripte für Datenanalyse & Modelle
 - tests/                 # Unit-Tests für Python-Module
 - .gitignore             # Ignorierte Dateien
 - requirements.txt       # Python-Abhängigkeiten
 - README.md              # Projektbeschreibung
+
 
   
 ## Teilnehmer:
@@ -46,6 +60,3 @@ google-trends-analysis/
 git clone https://github.com/euer-repo/world-bank-wdi-analysis.git
 cd world-bank-wdi-analysis
 pip install -r requirements.txt
-3.
-
-## Quellen:https://trends.google.com/trends?geo=DE&hl=de
