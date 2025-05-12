@@ -1,29 +1,18 @@
-## Zeitreihenanalyse: World Development Indicators: 
+## Zeitreihenanalyse: Google Trends 
 
-Dieses Projekt analysiert die wichtigsten sozioökonomischen Entwicklungsindikatoren für ausgewählte Länder mithilfe öffentlich zugänglicher Daten der Weltbank.
+In diesem Projekt werden folgende Google-Suchen verglichen und eine Zeitreihenanalyse erstellt.
 
 ## Themen
 
-- Population, total                [x] (klare Trends)
-- Poverty headcount ratio
-- GNI                              [x] (Zeigt Wirtschaftswachstum, wichtig für Entwicklungspolitik und Investitionsplanung)
-- Life expectancy at birth         [x] (Längerfristige Trends gut modellierbar, wichtig für Gesundheits- und Rentensysteme)
-- Fertility rate, births per women [x] (Einfluss auf langfristige Bevölkerungstrends, gut prognostizierbar)
-- Electric power consumption       [x] (Wichtig für Energieplanung, Industriewachstum, Klimaziele)
-- Inflation                        [x] (Hochrelevant für Wirtschaft, Geldpolitik; kurzfristig gut prognostizierbar)
-- Exports/Imports
-- Military expenditure
-- Net Migration
+Bitcoin - Ethereum
+Christiano Ronaldo - Lionel Messi
 
 ## Branches:
 - Master/Main
 - Data(prep.)
-- Forecast (Bei Themen mit [x] markeirt)
-- Grafiken?
-- Antonia
-- Noah
-- Test
-- Read.me
+- analysis: btc - eth
+- analysis: ronaldo - messi
+- merge- report (bericht)
   
 ## Teilnehmer:
 - Noah Wolf
@@ -38,4 +27,4 @@ cd world-bank-wdi-analysis
 pip install -r requirements.txt
 3.
 
-## Quellen: https://databank.worldbank.org/reports.aspx?source=2&country=DEU#
+## Quellen:https://trends.google.com/trends?geo=DE&hl=de
