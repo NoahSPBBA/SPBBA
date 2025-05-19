@@ -54,7 +54,7 @@ Auch hier wird ein Index berechnet: Interest_Index = Interest / Interest[erste Z
 - Zusammenführen (Join)
 Beide Datenreihen werden über das Datum (Date) mit inner join verbunden.
 
-Grafik: vis_1
+![Grafik: vis_1](Bilder_git/vis_1.png)
 Bilder_git/vis_1.png
 Interpretation:
 BMW Aktie (blau): Schwankt stark – hohe Volatilität, vor allem 2023–2024
