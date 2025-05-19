@@ -56,7 +56,6 @@ Beide Datenreihen werden über das Datum (Date) mit inner join verbunden.
 
 Visualisierung
 ![Grafik: vis_1](Bilder_git/vis_1.png)
-Bilder_git/vis_1.png
 Interpretation:
 BMW Aktie (blau): Schwankt stark – hohe Volatilität, vor allem 2023–2024
 Google Trends (orange): Viel konstanter, leicht steigender Trend, keine heftigen Ausschläge
