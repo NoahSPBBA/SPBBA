@@ -189,6 +189,77 @@ Y-Achse: BMW-Kurs (Index)
 Die Punkte sind weit gestreut, keine klare lineare Beziehung.
 Korrelation ist sehr schwach positiv (wie auch der berechnete Korrelationswert: 0.123).
 Es scheint kein starker Zusammenhang zu bestehen – das Interesse in Google beeinflusst die Aktie nicht direkt messbar.
+----------------------------------------------------------------------------------------------------------------------------
+time_series_modeling.py:
+- ARIMA-Modell (nur auf Basis der Zeitreihe selbst)
+
+- SARIMAX-Modell (mit Einfluss externer Variable: Google-Trends)
+
+Teil 1: ARIMA
+Wir verwenden Close_Index (also die BMW-Aktie, indexiert mit Basis 100).
+ARIMA(2,1,2) bedeutet:
+AR(2): Die letzten 2 Werte beeinflussen die aktuelle Schätzung.
+I(1): 1-fache Differenzierung → Zeitreihe war nicht stationär.
+MA(2): Fehlerterme der letzten 2 Zeitpunkte werden berücksichtig.
+
+ar.L1 = -0.0291 (nicht signifikant)
+ar.L2 = -0.9418 (signifikant)
+ma.L1 =  0.0945 (signifikant)
+ma.L2 =  0.9746 (signifikant)
+
+AR(2) ist sehr stark -> Kursentwicklung ist autokorreliert.
+
+Teil 2: SARIMAX-Modell
+Hier modellieren wir dieselbe Aktie mit Google Trends als erklärende Variable (Interest_Index).
+Wir testen: Erklären Trends das Kursverhalten?
+
+Interest_Index     0.0075   (nicht signifikant, p=0.945)
+
+Der Rest ist ähnlich zum ARIMA-Modell:
+Gute Modellanpassung, aber kaum Unterschiede in den Prognosewerten.
+2025-05-11    234.33
+2025-05-18    235.05
+
+
+Visualisierung:
+![Grafik:autokorrelation](Bilder_git/autokorrelation.png)
+- Was wir sehen:
+Die ACF zeigt, wie stark die Zeitreihe (BMW Close Index) mit ihren eigenen verzögerten Werten korreliert ist (Lag = Verzögerung in Wochen).
+
+- Interpretation:
+Der ACF-Verlauf nimmt langsam ab → Hinweis auf Nicht-Stationarität.
+Viele Lags (Verzögerungen) liegen außerhalb des Konfidenzintervalls -> es gibt eine signifikante Autokorrelation, d. h. vergangene Werte haben Einfluss auf aktuelle.
+
+
+![Grafik:partielle_autokorrelation](Bilder_git/partielle_autokorrelation.png)
+- Was wir sehen:
+Die PACF zeigt, wie stark ein einzelner verzögerter Wert die Zeitreihe beeinflusst, nachdem der Einfluss kürzerer Lags entfernt wurde.
+
+- Interpretation:
+Starke Korrelation nur bei Lag 1 → geeignetes AR-Modell könnte z. B. AR(1) sein.
+Ab Lag 2 ist fast alles innerhalb des Konfidenzintervalls → höhere Lags bringen wenig Zusatzinformation.
+
+
+![Grafik:arima_prognose](Bilder_git/arima_prognose.png)
+- Was wir sehen:
+Die blaue Linie zeigt die tatsächlichen Werte des BMW Index (indexiert auf 100).
+Die rote Linie zeigt die ARIMA-Prognose für die nächsten 10 Wochen.
+
+Interpretation:
+Die Prognose ist relativ stabil und folgt dem letzten Trend → typisch für Zeitreihen mit schwacher Trenddynamik.
+ARIMA nutzt nur vergangene BMW-Werte, keine externe Information.
+
+
+![Grafik:sarimax_prognose](https://github.com/NoahSPBBA/SPBBA/blob/main/Bilder_git/sarimax%20prognose.png))
+Was wir sehen:
+Die blaue Linie ist wieder der BMW Index.
+Die orange Linie zeigt die SARIMAX-Prognose, basierend auf BMW Index + Google Trends Index als exogene Variable.
+
+Interpretation:
+Die Prognose verläuft fast identisch wie bei ARIMA → Google Trends liefert kaum zusätzlichen Prognosewert.
+Das Modell hat den Exogenen Einfluss von Interest_Index als statistisch insignifikant bewertet (siehe coef = 0.0075, p = 0.945 im Modelloutput).
+
+
 
 
 1. Reposition klonen:
