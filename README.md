@@ -67,7 +67,8 @@ Kein klarer Gleichlauf → auf den ersten Blick nur schwache Korrelation
 ----------------------------------------------------------------------------------------------------------------------------------
 descriptive_stats.py:
 - Hier haben wir statistische Kennzahlen ausgerechnet:
-  --- LAGEKENNZAHLEN ---
+
+--- LAGEKENNZAHLEN ---
 
 Mittelwerte:
 BMW Aktie (Close): 74.02
