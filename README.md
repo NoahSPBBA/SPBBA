@@ -11,6 +11,7 @@ Ziel dieses Projekts ist es, eine bivariate Zeitreihenanalyse durchzuführen, um
 - descriptive_stats.py // Lagekennzahlen, Streuungsmaße, Wachstum, Korrelationen
 - time_series_modeling.py // ARIMA & SARIMAX-Modelle inkl. Prognose
 - daten_vereint.csv // Bereinigte, synchronisierte Zeitreihen (Google & BMW)
+- Bilder_git
 - README.md # Projektdokumentation
 ---------------------------------------------------------------------------------
 
@@ -41,17 +42,16 @@ Ziel dieses Projekts ist es, eine bivariate Zeitreihenanalyse durchzuführen, um
 data.exploration.py:
 - Einlesen & Bereinigen der Daten
 BMW-Aktie (bmw_aktie.csv)
-Nur Spalten Date und Close werden verwendet.
 Es wird ein Indexwert (Close_Index) berechnet: Close_Index = Close / Close[erste Zeile] * 100
 -> Dadurch wird der Aktienkurs auf eine Basis von 100 normiert – das macht die Entwicklung vergleichbar.
 
 - Google Trends (googletrends_bmw.csv)
 Datei wird zeilenweise eingelesen, da das Google-Exportformat unregelmäßig ist.
-Es wird die Spalte "Interest" bereinigt (Numerisch + Datumsformat).
+Es wird richtig formatiert (Numerisch + Datumsformat).
 Umbenannt zu "Date" -> damit Join mit der Aktie möglich ist.
 Auch hier wird ein Index berechnet: Interest_Index = Interest / Interest[erste Zeile] * 100
 
-- Zusammenführen (Join)
+- Zusammenführen (Join):
 Beide Datenreihen werden über das Datum (Date) mit inner join verbunden.
 
 Visualisierung
@@ -92,7 +92,7 @@ Google Trends: 100
 
 -> Interpretation:
 BMW hat hohe Streuung (34 – 106 €), Google Trends ist viel stabiler.
-Der Mittelwert ≈ Median → symmetrische Verteilung.
+Der Mittelwert ≈ Median -> symmetrische Verteilung.
 
 --- STREUUNGSMASSE ---
 
