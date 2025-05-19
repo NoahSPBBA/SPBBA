@@ -1,55 +1,57 @@
-## Projekt:  BMW Aktienkurs & Google Trends Analyse ##
+-------------------------------------------------------
+## Zeitreihenanalyse: BMW Aktie vs. Google-Trends "BMW"
+-------------------------------------------------------
 
-## Projektdetails
-- Programmiersprache: Python
-- Libraries: pandas, matplotlib, seaborn, numpy
-- Datenquellen:
-- BMW Aktienkurse (CSV-Datei)
-- Google Trends Daten zum Suchbegriff "BMW" (CSV-Datei)
+### Projektziel:
+Ziel dieses Projekts ist es, eine bivariate Zeitreihenanalyse durchzuführen, um zu untersuchen, ob ein Zusammenhang zwischen dem Google-Suchinteresse an "BMW" und der Kursentwicklung der BMW-Aktie besteht. Neben einer explorativen Analyse werden auch Prognosemodelle getestet.
 
-## Analyseinhalte
-1. Deskriptive Statistik
-- Lagekennzahlen (Mittelwert, Median, Spannweite)
-- Streuungsmaße (Standardabweichung, Varianz, Range)
+---------------------------------------------------------------------------------
+### Projektstruktur:
+- data.exploration.py // Datenimport, Bereinigung, Indexbildung, Visualisierung
+- descriptive_stats.py // Lagekennzahlen, Streuungsmaße, Wachstum, Korrelationen
+-  time_series_modeling.py // ARIMA & SARIMAX-Modelle inkl. Prognose
+-  daten_vereint.csv // Bereinigte, synchronisierte Zeitreihen (Google & BMW)
+- README.md # Projektdokumentation
+---------------------------------------------------------------------------------
 
-    Interpretation:
-        BMW-Kurse sind volatiler als das Suchinteresse bei Google.
-        Das öffentliche Interesse zeigt eine geringere Schwankung.
 
-2. Wachstumsraten
+---------------------------------------------------------------------------------
+### Analyseüberblick
+#### 1. Datenquellen: 
+- **BMW Aktie**: Historische Kursdaten (Yahoo Finance)
+- **Google Trends**: Suchinteresse für den Begriff „BMW“ (Wöchentlich)
 
-    BMW Aktie:
-        Absolut: +45.66 €
-        Relativ: +134.2 %
+#### 2. Datenaufbereitung
+- Vereinheitlichung auf wöchentliche Frequenz
+- Indexbildung mit Basiswert = 100
+- Inner Join auf gemeinsame Datumswerte
 
-    Google Trends Interesse:
-        Relativ: +21.52 %
+#### 3. Statistische Auswertung
+- Lage- und Streuungsmaße (Mittelwert, Median, Varianz, etc.)
+- Korrelations- und Kreuzkorrelationsanalyse (Lag-Analyse)
+- Prüfung auf Stationarität (ADF-Test)
 
-    Interpretation:
-        Der Aktienkurs hat sich mehr als verdoppelt, während das Suchinteresse nur moderat gestiegen ist.
+#### 4. Modellierung
+- **ARIMA**-Modell zur univariaten Prognose des BMW-Kurses
+- **SARIMAX**-Modell mit Google Trends als exogene Variable
+---------------------------------------------------------------------------------
 
-3. Zusammenhangsanalyse
-    Korrelationsanalyse zwischen Google Trends und BMW-Aktienkurs.
+### Ergebnisse
 
-    Ergebnis:
-        Keine starke lineare Korrelation (Lag 0: 0.123).
-        Kein signifikanter Vorlaufeffekt des Google-Suchinteresses auf den Aktienkurs.
-   
-## Visualisierungen
+- **Korrelation**: Nur schwacher Zusammenhang zwischen Google Trends und BMW-Aktie
+- **Kreuzkorrelation**: Kein klarer Vorlaufeffekt beobachtbar
+- **SARIMAX**: Kein signifikanter Einfluss des Google-Suchinteresses
+- **ARIMA-Prognose**: Stabile, plausible Vorhersage ohne externe Variablen
 
-- Boxplots zur Verteilung von Aktienkurs und Google-Trends-Interesse
-- Histogramme zur Kurs- und Interessenverteilung
-- Korrelationsdiagramm (Scatter Plot)
-- Balkendiagramm zur Visualisierung der Korrelation bei unterschiedlichen Lags
+  
 
-## Ausführung
 1. Reposition klonen:
    git clone https://github.com/NoahSPBBA/SPBBA.git
-2. Benötigte Libraries installieren:
-   pip install pandas matplotlib seaborn
-3. Skripte ausführen:
-   python data_exploration.py
+2. Benötigte Libraries:
+   - `pandas`, `matplotlib`, `seaborn`
+  - `statsmodels`
 
-## Projektbeteiligte
+
+### Projektbeteiligte
 Antonia Strohmenger
 Noah Wolf
