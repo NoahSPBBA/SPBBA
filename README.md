@@ -71,68 +71,66 @@ descriptive_stats.py:
 --- LAGEKENNZAHLEN ---
 
 Mittelwerte:
-BMW Aktie (Close): 74.02
-BMW Index: 217.57
-Google Trends: 84.93
-Google Index: 107.51
+- BMW Aktie (Close): 74.02
+- BMW Index: 217.57
+- Google Trends: 84.93
+- Google Index: 107.51
 
 Median:
-BMW Aktie (Close): 73.11
-BMW Index: 214.88
-Google Trends: 85.0
-Google Index: 107.59
+- BMW Aktie (Close): 73.11
+- BMW Index: 214.88
+- Google Trends: 85.0
+- Google Index: 107.59
 
 Minimum:
-BMW Aktie (Close): 34.02
-Google Trends: 69
+- BMW Aktie (Close): 34.02
+- Google Trends: 69
 
 Maximum:
-BMW Aktie (Close): 105.96
-Google Trends: 100
+- BMW Aktie (Close): 105.96
+- Google Trends: 100
 
 -> Interpretation:
-BMW hat hohe Streuung (34 – 106 €), Google Trends ist viel stabiler.
-Der Mittelwert ≈ Median -> symmetrische Verteilung.
+- BMW hat hohe Streuung (34 – 106 €), Google Trends ist viel stabiler.
+- Der Mittelwert ≈ Median -> symmetrische Verteilung.
 
 --- STREUUNGSMASSE ---
 
 Standardabweichung:
-BMW Close: 15.98
-BMW Index: 46.97
-Google Trends: 5.84
-Google Index: 7.4
+- BMW Close: 15.98
+- BMW Index: 46.97
+- Google Trends: 5.84
+- Google Index: 7.4
 
 Varianz:
-BMW Close: 255.33
-BMW Index: 2205.79 -> hoch volatil
-Google Trends: 34.16
-Google Index: 54.74 -> geringe Schwankung
+- BMW Close: 255.33
+- BMW Index: 2205.79 -> hoch volatil
+- Google Trends: 34.16
+- Google Index: 54.74 -> geringe Schwankung
 
 Range (Spannweite):
-BMW Close: 71.94
-Google Trends: 31
+- BMW Close: 71.94
+- Google Trends: 31
 
 -> Interpretation:
-BMW-Kurs ist deutlich volatiler als das Suchinteresse.
+- BMW-Kurs ist deutlich volatiler als das Suchinteresse.
 
 --- WACHSTUMSRATEN ---
 
 Absolute Wachstumsrate:
-BMW Aktie: 45.66 EUR (von 34.02 auf 79.68)
+- BMW Aktie: 45.66 EUR (von 34.02 auf 79.68)
 
 Relative Wachstumsrate:
-BMW Aktie: 134.2 %
+- BMW Aktie: 134.2 %
 
-Indexbildung (erste Woche = 100):
-Letzter Indexwert: 234.2
 
 Google Trends:
-  Absolute Wachstumsrate: 17
-  Relative Wachstumsrate: 21.52 %
+- Absolute Wachstumsrate: 17
+- Relative Wachstumsrate: 21.52 %
 
 Indexbildung (letzter Wert):
-  BMW Index: 234.2
-  Google Index: 121.52
+ - BMW Index: 234.2
+ - Google Index: 121.52
 
 -> Die BMW-Aktie ist deutlich stärker gewachsen als das Suchinteresse.
 
