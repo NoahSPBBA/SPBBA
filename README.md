@@ -156,7 +156,7 @@ Lag 5 Wochen: 0.061
 Es gibt keine starke lineare Beziehung zwischen Google-Trends und BMW-Aktie.
 Google-Trends erklären keine Kursveränderung zeitlich voraus.
 
-Visualisierung:
+Visualisierung: **** Grafik ist fehlerhaft - muss bearbeitet werden
 ![Grafik:boxplot_verteilungAktienInterest](Bilder_git/boxplot_verteilungAktieInterest.png)
 - Was zeigt der Boxplot?
 BMW Close (Aktienkurs): Hat eine größere Streuung und Ausreißer nach unten (unterhalb der unteren "Whiskers").
