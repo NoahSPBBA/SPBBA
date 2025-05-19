@@ -254,26 +254,27 @@ Die Prognose verläuft fast identisch wie bei ARIMA → Google Trends liefert ka
 Das Modell hat den Exogenen Einfluss von Interest_Index als statistisch insignifikant bewertet (siehe coef = 0.0075, p = 0.945 im Modelloutput).
 
 ### Fazit: 
-- Deskriptive Erkenntnisse
-Die BMW-Aktie zeigt eine deutlich höhere Volatilität (Spannweite ~72 €) als das Google-Trends-Interesse (nur ~31 Punkte).
-Die Verteilungen beider Reihen sind leicht rechtsschief, aber ohne gravierende Ausreißer.
-Das Google-Suchinteresse ist über die Zeit vergleichsweise stabil, der Aktienkurs jedoch stark schwankend.
+- Deskriptive Erkenntnisse:
+- Die BMW-Aktie zeigt eine deutlich höhere Volatilität (Spannweite ~72 €) als das Google-Trends-Interesse (nur ~31 Punkte).
+- Die Verteilungen beider Reihen sind leicht rechtsschief, aber ohne gravierende Ausreißer.
+- Das Google-Suchinteresse ist über die Zeit vergleichsweise stabil, der Aktienkurs jedoch stark schwankend.
 
 - Zusammenhangsanalyse
-Die lineare Korrelation zwischen BMW-Aktie und Google-Trends ist schwach positiv (r ≈ 0.12).
-Auch die Kreuzkorrelation mit Lags (0–20 Wochen) zeigt kein klares Vorlaufsignal → Google-Trends „führen“ den Kurs nicht signifikant.
+- Die lineare Korrelation zwischen BMW-Aktie und Google-Trends ist schwach positiv (r ≈ 0.12).
+- Auch die Kreuzkorrelation mit Lags (0–20 Wochen) zeigt kein klares Vorlaufsignal → Google-Trends „führen“ den Kurs nicht signifikant.
 -> Es gibt keine starke kurzfristige Kopplung, aber ein leichter Gleichlauf ist sichtbar.
 
 - Modellierung und Prognose
-Das ARIMA-Modell konnte die Zeitreihe gut abbilden und eine plausible kurzfristige Prognose liefern.
+- Das ARIMA-Modell konnte die Zeitreihe gut abbilden und eine plausible kurzfristige Prognose liefern.
+  
 Ein erweitertes SARIMAX-Modell mit Google Trends brachte keine Verbesserung:
-Der Google-Index war statistisch insignifikant im Modell (p ≈ 0.95).
+- Der Google-Index war statistisch insignifikant im Modell (p ≈ 0.95).
 -> Die Google-Suchanfragen tragen in diesem Fall keine zusätzliche prognostische Information zur BMW-Aktie bei.
 
-- Limitationen und Ausblick
-Die Analyse basiert nur auf einer exogenen Variable (Google Trends „BMW“)
-Weitere Variablen wie News-Sentiment, Absatzberichte oder Makrofaktoren könnten relevant sein.
-Auch andere Modellklassen wie VAR/VECM, Machine Learning Modelle oder nichtlineare Ansätze könnten in Zukunft getestet werden.
+- Limitationen und Ausblick:
+- Die Analyse basiert nur auf einer exogenen Variable (Google Trends „BMW“)
+- Weitere Variablen wie News-Sentiment, Absatzberichte oder Makrofaktoren könnten relevant sein.
+- Auch andere Modellklassen wie VAR/VECM, Machine Learning Modelle oder nichtlineare Ansätze könnten in Zukunft getestet werden.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 1. Reposition klonen:
    git clone https://github.com/NoahSPBBA/SPBBA.git
