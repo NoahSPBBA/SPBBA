@@ -9,34 +9,61 @@ Ziel dieses Projekts ist es, eine bivariate Zeitreihenanalyse durchzuführen, um
 ### Projektstruktur:
 - data.exploration.py // Datenimport, Bereinigung, Indexbildung, Visualisierung
 - descriptive_stats.py // Lagekennzahlen, Streuungsmaße, Wachstum, Korrelationen
--  time_series_modeling.py // ARIMA & SARIMAX-Modelle inkl. Prognose
--  daten_vereint.csv // Bereinigte, synchronisierte Zeitreihen (Google & BMW)
+- time_series_modeling.py // ARIMA & SARIMAX-Modelle inkl. Prognose
+- daten_vereint.csv // Bereinigte, synchronisierte Zeitreihen (Google & BMW)
 - README.md # Projektdokumentation
 ---------------------------------------------------------------------------------
 
 
 ---------------------------------------------------------------------------------
 ### Analyseüberblick
-#### 1. Datenquellen: 
+#### Datenquellen: 
 - **BMW Aktie**: Historische Kursdaten (Yahoo Finance)
 - **Google Trends**: Suchinteresse für den Begriff „BMW“ (Wöchentlich)
 
-#### 2. Datenaufbereitung
+#### Datenaufbereitung
 - Vereinheitlichung auf wöchentliche Frequenz
 - Indexbildung mit Basiswert = 100
 - Inner Join auf gemeinsame Datumswerte
 
-#### 3. Statistische Auswertung
+#### Statistische Auswertung
 - Lage- und Streuungsmaße (Mittelwert, Median, Varianz, etc.)
 - Korrelations- und Kreuzkorrelationsanalyse (Lag-Analyse)
 - Prüfung auf Stationarität (ADF-Test)
 
-#### 4. Modellierung
+#### Modellierung
 - **ARIMA**-Modell zur univariaten Prognose des BMW-Kurses
 - **SARIMAX**-Modell mit Google Trends als exogene Variable
 ---------------------------------------------------------------------------------
 
-### Ergebnisse
+### Ergebnisse: Hier erklären wir den Code und die Ergebnisse
+
+data.exploration.py:
+- Einlesen & Bereinigen der Daten
+BMW-Aktie (bmw_aktie.csv)
+Nur Spalten Date und Close werden verwendet.
+Es wird ein Indexwert (Close_Index) berechnet: Close_Index = Close / Close[erste Zeile] * 100
+-> Dadurch wird der Aktienkurs auf eine Basis von 100 normiert – das macht die Entwicklung vergleichbar.
+
+- Google Trends (googletrends_bmw.csv)
+Datei wird zeilenweise eingelesen, da das Google-Exportformat unregelmäßig ist.
+Es wird die Spalte "Interest" bereinigt (Numerisch + Datumsformat).
+Umbenannt zu "Date" -> damit Join mit der Aktie möglich ist.
+Auch hier wird ein Index berechnet: Interest_Index = Interest / Interest[erste Zeile] * 100
+
+- Zusammenführen (Join)
+Beide Datenreihen werden über das Datum (Date) mit inner join verbunden.
+
+Grafik: vis_1
+Interpretation:
+BMW Aktie (blau): Schwankt stark – hohe Volatilität, vor allem 2023–2024
+Google Trends (orange): Viel konstanter, leicht steigender Trend, keine heftigen Ausschläge
+Beide Reihen starten bei Indexwert 100 (links am Anfang der Zeitachse)
+
+Was fällt auf?
+Die BMW-Aktie steigt über den Zeitraum stark an (auf über 300 Punkte indexiert), während Google Trends maximal leicht mitzieht
+Kein klarer Gleichlauf → auf den ersten Blick nur schwache Korrelation
+
 
 - **Korrelation**: Nur schwacher Zusammenhang zwischen Google Trends und BMW-Aktie
 - **Kreuzkorrelation**: Kein klarer Vorlaufeffekt beobachtbar
