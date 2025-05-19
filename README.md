@@ -138,17 +138,13 @@ Indexbildung (letzter Wert):
 
 Korrelation (BMW Index vs. Google Index): 0.123
 
---- ZUSAMMENHANGSMAßE ---
-
-Korrelation (BMW Index vs. Google Index): 0.123
-
 Kreuzkorrelation mit Lag (Google voraus):
-Lag 0 Wochen: 0.123
-Lag 1 Wochen: 0.104
-Lag 2 Wochen: 0.084
-Lag 3 Wochen: 0.067
-Lag 4 Wochen: 0.064
-Lag 5 Wochen: 0.061
+- Lag 0 Wochen: 0.123
+- Lag 1 Wochen: 0.104
+- Lag 2 Wochen: 0.084
+- Lag 3 Wochen: 0.067
+- Lag 4 Wochen: 0.064
+- Lag 5 Wochen: 0.061
 
 -> Interpretation:
 Es gibt keine starke lineare Beziehung zwischen Google-Trends und BMW-Aktie.
